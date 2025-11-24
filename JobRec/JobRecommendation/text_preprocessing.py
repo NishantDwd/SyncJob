@@ -1,8 +1,22 @@
 import nltk
-nltk.download('wordnet')
-nltk.download('stopwords')
-nltk.download('words')
-nltk.download('punkt')
+import os
+
+def ensure_nltk_data():
+    """Download required NLTK data if not present"""
+    required_packages = ['wordnet', 'stopwords', 'words', 'punkt', 'omw-1.4']
+    
+    for package in required_packages:
+        try:
+            nltk.data.find(f'corpora/{package}')
+        except LookupError:
+            try:
+                nltk.download(package, quiet=True)
+            except Exception as e:
+                print(f"Warning: Could not download {package}: {e}")
+
+# Ensure data is downloaded before any imports
+ensure_nltk_data()
+
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords 
 from string import punctuation
@@ -13,7 +27,7 @@ from nltk.collocations import *
 from nltk.corpus import words
 import pandas as pd
 from  JobRecommendation.exception import jobException
-import os,sys
+import sys
 import numpy as np
 import streamlit as st
 

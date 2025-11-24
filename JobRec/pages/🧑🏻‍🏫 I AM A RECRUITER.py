@@ -4,6 +4,13 @@ import numpy as np
 import base64
 import os,sys
 import pymongo
+
+import nltk
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('words', quiet=True)
+
 from JobRecommendation.exception import jobException
 from JobRecommendation.side_logo import add_logo
 from JobRecommendation.sidebar import sidebar

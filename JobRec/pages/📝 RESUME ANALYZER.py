@@ -2,6 +2,16 @@ import streamlit as st
 import pandas as pd
 import base64, random
 import time, datetime
+
+import nltk
+nltk.download('stopwords', quiet=True)
+nltk.download('punkt', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('words', quiet=True)
+nltk.download('omw-1.4', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('maxent_ne_chunker', quiet=True)
+
 from pyresparser import ResumeParser
 import io, random
 from streamlit_tags import st_tags
