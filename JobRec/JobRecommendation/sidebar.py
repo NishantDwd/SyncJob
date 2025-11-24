@@ -103,7 +103,7 @@ def sidebar():
     st.sidebar.markdown("""
         <div class="sidebar-about">
             <div class="sidebar-text" style="font-size: 12px; margin-top: 20px;">
-                © 2024 SyncJob<br>
+                © 2025 SyncJob<br>
                 Powered by AI & Machine Learning
             </div>
         </div>

@@ -494,7 +494,7 @@ st.markdown("""
             <a href="#" class="footer-link">Privacy</a>
         </div>
         <div style="margin-top: 20px; font-size: 14px;">
-            © 2024 SyncJob. All rights reserved.
+            © 2025 SyncJob. All rights reserved.
         </div>
     </div>
 """, unsafe_allow_html=True)
